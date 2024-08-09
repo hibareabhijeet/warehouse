@@ -19,7 +19,7 @@ Expose an interactive REST API to manipulate inventory of the warehouse
 
 1. Get this repository in local
    ```shell
-   git clone 
+   git clone https://github.com/hibareabhijeet/warehouse.git
    ```
 2. Enter into folder created from git clone
    ```shell

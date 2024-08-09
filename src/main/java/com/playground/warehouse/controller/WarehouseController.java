@@ -26,7 +26,7 @@ public class WarehouseController {
    */
   @GetMapping("/articles")
   public ResponseEntity<WarehouseResponse<Article>> getAllArticles() {
-    log.info("In getAllArticles controller");
+    log.info("In getAllArticles method");
     return inventoryService.getAllArticles();
   }
 
@@ -39,7 +39,7 @@ public class WarehouseController {
   @PostMapping("/import/inventoryfile")
   public ResponseEntity<WarehouseResponse<Article>> importInventoryFile(
       @RequestParam("file") MultipartFile file) {
-    log.info("In importInventoryFile controller");
+    log.info("In importInventoryFile method");
     return inventoryService.importInventoryFile(file);
   }
 
@@ -50,7 +50,7 @@ public class WarehouseController {
    */
   @GetMapping("/products")
   public ResponseEntity<WarehouseResponse<Product>> getAllProducts() {
-    log.info("In getAllProducts controller");
+    log.info("In getAllProducts method");
     return productService.getAllProducts();
   }
 
@@ -63,7 +63,7 @@ public class WarehouseController {
   @PostMapping("/import/productfile")
   public ResponseEntity<WarehouseResponse<Product>> importProductFile(
       @RequestParam("file") MultipartFile file) {
-    log.info("In importProductFile controller");
+    log.info("In importProductFile method");
     return productService.importProductFile(file);
   }
 
@@ -74,7 +74,7 @@ public class WarehouseController {
    */
   @GetMapping("/available/products")
   public ResponseEntity<WarehouseResponse<Product>> getAvailableProductsWithQuantity() {
-    log.info("In getAvailableProductsWithQuantity controller");
+    log.info("In getAvailableProductsWithQuantity method");
     return productService.getAvailableProductWithQuantity();
   }
 
@@ -87,7 +87,7 @@ public class WarehouseController {
   @DeleteMapping("/sell/product")
   public ResponseEntity<WarehouseResponse<Product>> sellProductByName(
       @RequestParam String productName) {
-    log.info("In sellProductByName controller");
+    log.info("In sellProductByName method");
     return productService.sellProductByName(productName);
   }
 }
