@@ -1,5 +1,7 @@
 package com.tech.warehouse.controller;
 
+import static com.playground.warehouse.utils.Constants.API_VERSION_1;
+
 import com.playground.warehouse.utils.WarehouseResponse;
 import com.tech.warehouse.entities.Article;
 import com.tech.warehouse.entities.Product;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping(API_VERSION_1)
 @Slf4j
 public class WarehouseController {
 
